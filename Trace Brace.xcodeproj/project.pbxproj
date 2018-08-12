@@ -12,6 +12,7 @@
 		08C3EFB9211F1C74006108A1 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFB8211F1C74006108A1 /* StepOne.swift */; };
 		08C3EFBB211F1C88006108A1 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFBA211F1C88006108A1 /* StepTwo.swift */; };
 		08C3EFBD211F2684006108A1 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFBC211F2684006108A1 /* StepThree.swift */; };
+		08C3EFBF211F50F9006108A1 /* CodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFBE211F50F9006108A1 /* CodeReader.swift */; };
 		08EC8A87211DE2D500E69CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC8A86211DE2D500E69CC8 /* AppDelegate.swift */; };
 		08EC8A89211DE2D500E69CC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC8A88211DE2D500E69CC8 /* ViewController.swift */; };
 		08EC8A8C211DE2D500E69CC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08EC8A8A211DE2D500E69CC8 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		08C3EFB8211F1C74006108A1 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
 		08C3EFBA211F1C88006108A1 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
 		08C3EFBC211F2684006108A1 /* StepThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThree.swift; sourceTree = "<group>"; };
+		08C3EFBE211F50F9006108A1 /* CodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeReader.swift; sourceTree = "<group>"; };
 		08EC8A83211DE2D500E69CC8 /* Trace Brace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trace Brace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC8A86211DE2D500E69CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08EC8A88211DE2D500E69CC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				08C3EFB8211F1C74006108A1 /* StepOne.swift */,
 				08C3EFBA211F1C88006108A1 /* StepTwo.swift */,
 				08C3EFBC211F2684006108A1 /* StepThree.swift */,
+				08C3EFBE211F50F9006108A1 /* CodeReader.swift */,
 			);
 			path = "Trace Brace";
 			sourceTree = "<group>";
@@ -208,13 +211,16 @@
 				TargetAttributes = {
 					08EC8A82211DE2D500E69CC8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					08EC8A96211DE2D700E69CC8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 08EC8A82211DE2D500E69CC8;
 					};
 					08EC8AA1211DE2D700E69CC8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 08EC8A82211DE2D500E69CC8;
 					};
 				};
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C3EFBB211F1C88006108A1 /* StepTwo.swift in Sources */,
+				08C3EFBF211F50F9006108A1 /* CodeReader.swift in Sources */,
 				08C3EFB7211F01F5006108A1 /* StepZero.swift in Sources */,
 				08EC8A89211DE2D500E69CC8 /* ViewController.swift in Sources */,
 				08C3EFBD211F2684006108A1 /* StepThree.swift in Sources */,
@@ -458,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tracebrace.Trace-Brace";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -475,7 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tracebrace.Trace-Brace";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -494,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tracebrace.Trace-BraceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trace Brace.app/Trace Brace";
 			};
@@ -514,7 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tracebrace.Trace-BraceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trace Brace.app/Trace Brace";
 			};
@@ -533,7 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tracebrace.Trace-BraceUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Trace Brace";
 			};
@@ -552,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tracebrace.Trace-BraceUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Trace Brace";
 			};

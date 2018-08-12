@@ -18,7 +18,7 @@ class OnboardingPager : UIPageViewController {
         dataSource = self
         delegate = self
         // this sets the background color of the built-in paging dots
-        view.backgroundColor = UIColor.darkGray
+        view.backgroundColor = UIColor(red:1.00, green:0.53, blue:0.02, alpha:1.0)
         
         // This is the starting point.  Start with step zero.
         setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
@@ -35,13 +35,21 @@ class OnboardingPager : UIPageViewController {
     func getStepTwo() -> StepTwo {
         return storyboard!.instantiateViewController(withIdentifier: "StepTwo") as! StepTwo
     }
+    
+    func getStepThree() -> StepThree {
+        return storyboard!.instantiateViewController(withIdentifier: "StepThree") as! StepThree
+        
+    }
 }
 
 // MARK: - UIPageViewControllerDataSource methods
 extension OnboardingPager : UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController is StepTwo {
+        
+        if viewController is StepThree {
+            return getStepTwo()
+        } else if viewController is StepTwo {
             return getStepOne()
         } else if viewController is StepOne {
             return getStepZero()
@@ -55,6 +63,8 @@ extension OnboardingPager : UIPageViewControllerDataSource {
             return getStepOne()
         } else if viewController is StepOne {
             return getStepTwo()
+        } else if viewController is StepTwo {
+            return getStepThree()
         } else {
             return nil
         }
