@@ -12,17 +12,50 @@ import UIKit
 
 class OnboardingPager : UIPageViewController {
     
+    
     override func viewDidLoad() {
-        // Set the dataSource and delegate in code.
-        // I can't figure out how to do this in the Storyboard!
-        dataSource = self
-        delegate = self
-        // this sets the background color of the built-in paging dots
-        view.backgroundColor = UIColor(red:1.00, green:0.53, blue:0.02, alpha:1.0)
         
-        // This is the starting point.  Start with step zero.
-        setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
+        
+  
+
+       
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if isAppAlreadyLaunchedOnce() {
+            print("LOLOLOLOLO")
+            /*
+             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+             let newViewController = storyBoa rd.instantiateViewController(withIdentifier: "Messagess")
+             self.navigationController?.pushViewController(newViewController, animated: true)
+             
+             
+             let storyboard = UIStoryboard(name: "Main", bundle: nil)
+             let controller = storyboard.instantiateViewController(withIdentifier: "Messagess")
+             self.present(controller, animated: true, completion: nil)
+             */
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Messagess")
+            present(viewController, animated: true, completion: nil)
+            
+            
+            
+            
+        } else {
+            
+            
+            dataSource = self
+            
+            
+            delegate = self
+            view.backgroundColor = UIColor(red:1.00, green:0.53, blue:0.02, alpha:1.0)
+            setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
+            
+        }
+    }
+    
+    
     
     func getStepZero() -> StepZero {
         return storyboard!.instantiateViewController(withIdentifier: "StepZero") as! StepZero
@@ -42,7 +75,6 @@ class OnboardingPager : UIPageViewController {
     }
 }
 
-// MARK: - UIPageViewControllerDataSource methods
 extension OnboardingPager : UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -70,19 +102,30 @@ extension OnboardingPager : UIPageViewControllerDataSource {
         }
     }
     
-    // Enables pagination dots
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 3
     }
     
-    // This only gets called once, when setViewControllers is called
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
     }
     
 }
 
-// MARK: - UIPageViewControllerDelegate methods
+
+func isAppAlreadyLaunchedOnce()->Bool{
+    let defaults = UserDefaults.standard
+    
+    if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+        print("App already launched : \(isAppAlreadyLaunchedOnce)")
+        return true
+    }else{
+        defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+        print("App launched first time")
+        return false
+    }
+}
+
 extension OnboardingPager : UIPageViewControllerDelegate {
     
 }
