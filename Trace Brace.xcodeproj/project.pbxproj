@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B2E1622138829D00E0319A /* CreateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2E1612138829D00E0319A /* CreateMessage.swift */; };
 		08C3EFB5211F005F006108A1 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFB4211F005F006108A1 /* OnboardingPager.swift */; };
 		08C3EFB7211F01F5006108A1 /* StepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFB6211F01F5006108A1 /* StepZero.swift */; };
 		08C3EFB9211F1C74006108A1 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFB8211F1C74006108A1 /* StepOne.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08B2E1612138829D00E0319A /* CreateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessage.swift; sourceTree = "<group>"; };
 		08C3EFB4211F005F006108A1 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		08C3EFB6211F01F5006108A1 /* StepZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepZero.swift; sourceTree = "<group>"; };
 		08C3EFB8211F1C74006108A1 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				08E92AEE21209B0700673E12 /* Messagess.swift */,
 				08E92AF02120A2B300673E12 /* Messagess.storyboard */,
 				08E92AF22120A9D300673E12 /* Selector.swift */,
+				08B2E1612138829D00E0319A /* CreateMessage.swift */,
 			);
 			path = "Trace Brace";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				08EC8A89211DE2D500E69CC8 /* ViewController.swift in Sources */,
 				08C3EFBD211F2684006108A1 /* StepThree.swift in Sources */,
 				08E92AEF21209B0700673E12 /* Messagess.swift in Sources */,
+				08B2E1622138829D00E0319A /* CreateMessage.swift in Sources */,
 				08C3EFB5211F005F006108A1 /* OnboardingPager.swift in Sources */,
 				08EC8A87211DE2D500E69CC8 /* AppDelegate.swift in Sources */,
 				08C3EFB9211F1C74006108A1 /* StepOne.swift in Sources */,

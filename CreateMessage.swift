@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+
+import UIKit
+
+class CreateMessage: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
