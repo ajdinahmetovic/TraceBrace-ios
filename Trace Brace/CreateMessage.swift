@@ -40,6 +40,8 @@ class CreateMessage: UIViewController {
     
     @IBAction func addMessage(_ sender: Any) {
         
+        //OVDJE DODAJE PORUKE
+        
          let message = messageText.text
          let phoneNumber = numberText.text
         
@@ -47,7 +49,7 @@ class CreateMessage: UIViewController {
         
         if localDb.object(forKey: "phoneNumbers") == nil {
             
-            //  Doesn't exist
+        
         
             
             

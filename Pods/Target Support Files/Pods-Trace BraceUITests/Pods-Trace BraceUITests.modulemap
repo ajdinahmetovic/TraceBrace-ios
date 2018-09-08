@@ -1,0 +1,6 @@
+framework module Pods_Trace_BraceUITests {
+  umbrella header "Pods-Trace BraceUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
