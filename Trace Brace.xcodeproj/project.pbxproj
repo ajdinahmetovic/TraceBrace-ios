@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087014AF214D27240066D596 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087014AE214D27240066D596 /* Settings.swift */; };
 		087030E421414B040033C921 /* UIMessagess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087030E321414B040033C921 /* UIMessagess.swift */; };
 		08B2E1622138829D00E0319A /* CreateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2E1612138829D00E0319A /* CreateMessage.swift */; };
 		08C3EFB5211F005F006108A1 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3EFB4211F005F006108A1 /* OnboardingPager.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		087014AE214D27240066D596 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		087030E321414B040033C921 /* UIMessagess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMessagess.swift; sourceTree = "<group>"; };
 		08B2E1612138829D00E0319A /* CreateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessage.swift; sourceTree = "<group>"; };
 		08C3EFB4211F005F006108A1 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				08E92AF22120A9D300673E12 /* Selector.swift */,
 				08B2E1612138829D00E0319A /* CreateMessage.swift */,
 				087030E321414B040033C921 /* UIMessagess.swift */,
+				087014AE214D27240066D596 /* Settings.swift */,
 			);
 			path = "Trace Brace";
 			sourceTree = "<group>";
@@ -271,6 +274,11 @@
 					08EC8A82211DE2D500E69CC8 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					08EC8A96211DE2D700E69CC8 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -430,6 +438,7 @@
 			files = (
 				08C3EFBB211F1C88006108A1 /* StepTwo.swift in Sources */,
 				08C3EFBF211F50F9006108A1 /* CodeReader.swift in Sources */,
+				087014AF214D27240066D596 /* Settings.swift in Sources */,
 				08E92AF32120A9D300673E12 /* Selector.swift in Sources */,
 				08C3EFB7211F01F5006108A1 /* StepZero.swift in Sources */,
 				08EC8A89211DE2D500E69CC8 /* ViewController.swift in Sources */,

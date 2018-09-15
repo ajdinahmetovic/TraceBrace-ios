@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import PureLayout
+import SystemConfiguration
+import SystemConfiguration.CaptiveNetwork
+
 
 class Messagess: UIViewController {
     
@@ -17,13 +20,12 @@ class Messagess: UIViewController {
     var box = UIView.newAutoLayout()
     
     
-    //OBJEKAT ZA SCROLL VIEW U MESAGESS
-    @IBOutlet weak var containerView: UIScrollView!
+    @IBOutlet weak var container: UIStackView!
     
-    
-  
-
     override func viewDidAppear(_ animated: Bool) {
+        
+        
+        
         
     
         print("aksndkjaskjnda")
@@ -60,8 +62,43 @@ class Messagess: UIViewController {
         }
         
         
+        let arr = getUsedSSID();
+        
+        for name in arr {
+            print(name);
+        }
+        
         //KRAJ
     }
+    
+    
+    
+    
+   
+    //create variable
+    var SSIDNameArray = NSMutableArray()
+    var nameArray : NSArray = [];
+    // Here function to return all SSIDName
+    func getUsedSSID()->NSArray{
+        let interfaces = CNCopySupportedInterfaces()
+        if interfaces != nil {
+            let interfacesArray = CFBridgingRetain(interfaces) as! NSArray
+            if interfacesArray.count > 0 {
+                for interfaceName in interfacesArray {
+                    let unsafeInterfaceData = CNCopyCurrentNetworkInfo(interfaceName as! CFString)! as NSDictionary
+                    let SSIDName = unsafeInterfaceData["SSID"] as! String
+                    self.SSIDNameArray .add(SSIDName)
+                }
+                nameArray = self.SSIDNameArray .copy() as! NSArray
+                return nameArray;
+            }else{
+                return nameArray;
+            }
+        }else{
+            return nameArray;
+        }
+    }
+    
     
     
     override func viewDidLoad() {
@@ -81,14 +118,14 @@ class Messagess: UIViewController {
 }
 
 //POKUSAJ NECEGA
-/*
+
 extension Messagess {
     override func loadView() {
         
-        containerView = UIScrollView()
-        containerView?.addSubview(box!)
+        
+        container?.addSubview(box!)
         box?.backgroundColor = UIColor.green
-        containerView?.setNeedsUpdateConstraints()
+        container?.setNeedsUpdateConstraints()
         
         
     }
@@ -96,7 +133,7 @@ extension Messagess {
     override func updateViewConstraints() {
         
         if !didSetupConstraints {
-            box?.autoSetDimensions(to: CGSize(width: containerView.frame.width, height: 300))
+            box?.autoSetDimensions(to: CGSize(width: container.frame.width, height: 300))
             
             
             box!.autoPinEdge(toSuperviewEdge: .top, withInset: 30)
@@ -112,4 +149,4 @@ extension Messagess {
         super.updateViewConstraints()
     }
 }
-*/
+
