@@ -312,6 +312,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="XCg-fn-u6f" secondAttribute="height" multiplier="47:31" id="t7q-sK-0Sk"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="gpsSetting:" destination="QR2-p4-RTT" eventType="valueChanged" id="tJU-2b-EBV"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -359,6 +362,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="fto-ux-aLy" secondAttribute="height" multiplier="47:31" id="URE-MH-iwI"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="liveTracking:" destination="QR2-p4-RTT" eventType="valueChanged" id="Fjw-70-ZJZ"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -402,6 +408,10 @@
                                                 <constraint firstItem="RVW-eT-QTf" firstAttribute="top" secondItem="lRG-EK-6bd" secondAttribute="topMargin" constant="1" id="nXy-k6-XCA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CLt-6z-1Ev" appends="YES" id="ZdI-yI-GUK"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0sR-u3-52M">
                                         <rect key="frame" x="0.0" y="284" width="375" height="44"/>
@@ -426,6 +436,10 @@
                                                 <constraint firstItem="s1v-YW-BeE" firstAttribute="top" secondItem="Swo-uw-PUG" secondAttribute="topMargin" constant="1" id="iBe-8h-iKO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="d0O-01-gnl" appends="YES" id="iIK-Ok-xb4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5rx-Wy-LZR">
                                         <rect key="frame" x="0.0" y="328" width="375" height="44"/>
@@ -443,6 +457,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="krn-uX-bEb" appends="YES" id="rYz-bQ-jTY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -480,11 +498,29 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="buy" destination="Swo-uw-PUG" id="9U5-Aw-pcO"/>
                         <outlet property="contact" destination="lRG-EK-6bd" id="nWC-M2-vd8"/>
+                        <outlet property="feedback" destination="BOz-lo-NW8" id="ccf-B1-Un9"/>
                         <outlet property="gpsSetting" destination="XCg-fn-u6f" id="rMP-3f-QnK"/>
+                        <outlet property="liveTracking" destination="fto-ux-aLy" id="gRx-Mh-g60"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7S-er-6LF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CLt-6z-1Ev">
+                    <connections>
+                        <action selector="about:" destination="QR2-p4-RTT" id="pGg-Ep-jRd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="d0O-01-gnl">
+                    <connections>
+                        <action selector="buy:" destination="QR2-p4-RTT" id="Fa9-q9-Llp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="krn-uX-bEb">
+                    <connections>
+                        <action selector="feedback:" destination="QR2-p4-RTT" id="Tej-oV-0FI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1780" y="1541.3793103448277"/>
         </scene>

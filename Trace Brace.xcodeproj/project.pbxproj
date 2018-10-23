@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086D90762157A29900200F7F /* MessageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086D90752157A29900200F7F /* MessageInterface.swift */; };
 		087014AF214D27240066D596 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087014AE214D27240066D596 /* Settings.swift */; };
 		087030E421414B040033C921 /* UIMessagess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087030E321414B040033C921 /* UIMessagess.swift */; };
 		08B2E1622138829D00E0319A /* CreateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2E1612138829D00E0319A /* CreateMessage.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		086D90752157A29900200F7F /* MessageInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInterface.swift; sourceTree = "<group>"; };
 		087014AE214D27240066D596 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		087030E321414B040033C921 /* UIMessagess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMessagess.swift; sourceTree = "<group>"; };
 		08B2E1612138829D00E0319A /* CreateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessage.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				08B2E1612138829D00E0319A /* CreateMessage.swift */,
 				087030E321414B040033C921 /* UIMessagess.swift */,
 				087014AE214D27240066D596 /* Settings.swift */,
+				086D90752157A29900200F7F /* MessageInterface.swift */,
 			);
 			path = "Trace Brace";
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				087030E421414B040033C921 /* UIMessagess.swift in Sources */,
 				08C3EFBD211F2684006108A1 /* StepThree.swift in Sources */,
 				08E92AEF21209B0700673E12 /* Messagess.swift in Sources */,
+				086D90762157A29900200F7F /* MessageInterface.swift in Sources */,
 				08B2E1622138829D00E0319A /* CreateMessage.swift in Sources */,
 				08C3EFB5211F005F006108A1 /* OnboardingPager.swift in Sources */,
 				08EC8A87211DE2D500E69CC8 /* AppDelegate.swift in Sources */,
